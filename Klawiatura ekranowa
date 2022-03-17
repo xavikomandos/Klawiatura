@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        for( var Klawiatura = 65; Klawiatura < 90; Klawiatura++) 
+        {
+            function test(event)
+            {
+                console.log(event.srcElement.innerHTML)
+            }
+        let a = String.fromCharCode(Klawiatura)
+        let b = document.createElement('button');
+        b.innerHTML = a
+        b.addEventListener("click", test, true)
+        document.body.appendChild(b); 
+        }
+
+    </script>
+    <br>
+    <input type="text" onclick="test">
+</body>
+</html>
